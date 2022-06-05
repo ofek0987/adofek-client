@@ -1,7 +1,8 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class UserStatus(Enum):
-    OFFLINE = 0
-    ONLINE = 1
-    DO_NOT_DISTURB = 2
+    """Enum representing a user's availability status."""
+    OFFLINE = auto()
+    ONLINE = auto()
+    DO_NOT_DISTURB = auto()
