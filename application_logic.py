@@ -1,4 +1,4 @@
-import my_user
+from users import my_user
 import contacts_collection
 
 

@@ -1,5 +1,6 @@
-import other_user
-import message
+from users import other_user
+from messages import message
+
 
 class DB:
 

@@ -1,4 +1,4 @@
-import other_user
+from users import other_user
 import db
 
 class ContactsCollection:

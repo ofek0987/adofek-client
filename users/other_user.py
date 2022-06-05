@@ -1,5 +1,6 @@
 import db
-import message
+from messages import message
+
 
 class OtherUser:
 
