@@ -1,14 +1,13 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
-import tkinter
+from users.user import IUser
 
 
 class IMessage(ABC):
     """Interface representing all the messages that can be sent/received, for example a text message"""
-    def __init__(self, identifier: str):
+    def __init__(self, identifier: str, sender: IUser, receiver: IUser):
         self.identifier = identifier
+        self.sender = sender
+        self.receiver = receiver
 
-    @abstractmethod
-    def display(self) -> tkinter.Label:
-        """Will be used by the GUI in order to display the message"""
-        pass
+
