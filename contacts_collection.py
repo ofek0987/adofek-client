@@ -1,15 +1,21 @@
-from users import other_user
-import db
+from users.user import IUser
+from db import DB
+
 
 class ContactsCollection:
-    contacts: dict[str, other_user]
-    db: db
+    """Stores all the contacts and manage them."""
+    def __init__(self, db: DB):
+        """
+        :param db: The local database that stores all the needed information.
+        """
+        self.db = db
+        self._contacts = []
 
-    def add_contact(self,user):
+    def add_contact(self, user: IUser):
         pass
 
-    def get_all_contacts(self) -> list:
+    def get_all_contacts(self) -> list[IUser]:
         pass
 
-    def get_contacts_by_username(self,username) -> other_user:
+    def get_contacts_by_username(self, username: str) -> IUser:
         pass
