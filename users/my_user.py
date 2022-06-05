@@ -1,4 +1,9 @@
-class MyUser:
+from users.user import IUser
+from user_status import UserStatus
 
-    def update_status(self,status):
+
+class MyUser(IUser):
+    """The user that is used by the local user."""
+
+    def update_status(self, status: UserStatus):
         pass
