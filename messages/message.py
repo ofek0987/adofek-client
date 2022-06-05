@@ -1,5 +1,5 @@
-from abc import ABC
-
+from abc import ABC, abstractmethod
+from message_status import MessageStatus
 from users.user import IUser
 
 
@@ -9,5 +9,9 @@ class IMessage(ABC):
         self.identifier = identifier
         self.sender = sender
         self.receiver = receiver
+
+    @abstractmethod
+    def update_status(self, status: MessageStatus):
+        pass
 
 
