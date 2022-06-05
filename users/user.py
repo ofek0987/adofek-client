@@ -1,8 +1,9 @@
-import user_status
+from dataclasses import dataclass
+
+from user_status import UserStatus
 
 
+@dataclass
 class IUser:
-    Status: user_status
+    Status: UserStatus
     Username: str
-
-
