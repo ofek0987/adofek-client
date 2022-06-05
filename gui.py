@@ -2,7 +2,7 @@ import tkinter
 
 
 class GUI:
-
+    """Manage all the gui."""
 
 
     @staticmethod
