@@ -1,5 +1,7 @@
 import tkinter
 from login_state import LoginWindow
+from main_form import MainForm
+from tkinter import filedialog
 
 
 class GUI:
@@ -7,16 +9,18 @@ class GUI:
         or consider making own methods for any state."""
 
     def __init__(self):
-        self.main_window = None
-        self.login_state = None
+        self.main_window = tkinter.Tk()
+        self.login_state = LoginWindow(self.main_window)
+        self.main_state = MainForm(self.main_window)
 
     def display_splash_screen(self):
         pass
 
+    def display_main_screen(self):
+        self.main_state.create_bg_layout()
+
     def display_sign_in_state(self):
         """Use LoginWindow class to create sign in form"""
-        self.main_window = tkinter.Tk()
-        self.login_state = LoginWindow(self.main_window)
         self.login_state.create_frame_layer()
         self.login_state.create_sign_in_layer()
         self.login_state.create_logo()
@@ -39,11 +43,20 @@ class GUI:
     def create_text_message_label(text) -> tkinter.Label:
         pass
 
-    @staticmethod
-    def create_image_message_label(text) -> tkinter.Label:
-        pass
+    def create_image_message_label(self) -> tkinter.Label:
+        choosen_images = filedialog.askopenfile(filetypes=[("image", ".jpeg"),
+                    ("image", ".png"),
+                    ("image", ".jpg"),
+                ],title="select")
+        self.main_state.create_image_label(choosen_images)
+
 
     @staticmethod
     def create_file_message_label(text) -> tkinter.Label:
         pass
 
+
+s = GUI()
+s.display_main_screen()
+s.create_image_message_label()
+s.update()

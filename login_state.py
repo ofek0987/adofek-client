@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 class LoginWindow:
     """Create and init sign in form."""
 
-    def __init__(self, window):
+    def __init__(self, window: tkinter.Tk):
         self.show_icon_panel = None
         self.hide_icon_panel = None
         self.hide_icon = None

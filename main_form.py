@@ -1,13 +1,15 @@
 import tkinter
-from PIL import ImageTk,Image
+from PIL import ImageTk, Image
 
 
 class MainForm:
     def __init__(self, window: tkinter.Tk):
+        self.window = window
+        self.new_image = None
         self.bg_panel = None
         self.bg_image = None
-        window.title("ADOFEK CHAT")
-        window.geometry("600x600")
+        self.window.title("ADOFEK CHAT")
+        self.window.geometry("600x600")
 
     def create_bg_layout(self):
         self.bg_image = Image.open("image projects\\bg_image.jpg")
@@ -15,3 +17,8 @@ class MainForm:
         self.bg_panel = tkinter.Label(self.window, image=photo)
         self.bg_panel.image = photo
         self.bg_panel.pack(fill="both", expand=1)
+
+    def create_image_label(self, path):
+        self.new_image = Image.open(path)
+        photo = ImageTk.PhotoImage(self.new_image)
+        print(photo)
