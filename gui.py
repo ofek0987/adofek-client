@@ -1,7 +1,7 @@
 import tkinter
 from login_state import LoginWindow
 from main_form import MainForm
-from tkinter import filedialog
+
 
 
 class GUI:
@@ -39,24 +39,6 @@ class GUI:
     def clear(self):
         self.main_window.destroy()
 
-    @staticmethod
-    def create_text_message_label(text) -> tkinter.Label:
-        pass
-
-    def create_image_message_label(self) -> tkinter.Label:
-        choosen_images = filedialog.askopenfile(filetypes=[("image", ".jpeg"),
-                    ("image", ".png"),
-                    ("image", ".jpg"),
-                ],title="select")
-        self.main_state.create_image_label(choosen_images)
 
 
-    @staticmethod
-    def create_file_message_label(text) -> tkinter.Label:
-        pass
 
-
-s = GUI()
-s.display_main_screen()
-s.create_image_message_label()
-s.update()

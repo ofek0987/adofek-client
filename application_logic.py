@@ -1,5 +1,6 @@
 from users.user import IUser
 from contacts_collection import ContactsCollection
+from gui import GUI
 
 
 class ApplicationLogic:
@@ -8,3 +9,6 @@ class ApplicationLogic:
     def __init__(self, my_user: IUser, contacts: ContactsCollection):
         self.my_user = my_user
         self.contacts = contacts
+
+
+
