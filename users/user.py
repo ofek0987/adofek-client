@@ -5,5 +5,5 @@ from user_status import UserStatus
 
 @dataclass
 class IUser:
-    Status: UserStatus
-    Username: str
+    status: UserStatus
+    username: str

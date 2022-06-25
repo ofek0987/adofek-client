@@ -2,7 +2,7 @@ import tkinter
 
 
 class GUI:
-    """Manage all the gui."""
+    """Manage gui, forms and communicate with application_logic"""
 
     @staticmethod
     def create_text_message_label(text) -> tkinter.Label:
