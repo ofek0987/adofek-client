@@ -1,5 +1,5 @@
-from users.user import IUser
 from user_status import UserStatus
+from users.user import IUser
 
 
 class MyUser(IUser):
