@@ -1,4 +1,3 @@
-from contacts_collection import ContactsCollection
 from messages.message import IMessage
 from users.other_user import OtherUser
 from users.user import IUser
@@ -7,7 +6,7 @@ from users.user import IUser
 class DB:
     """Database management for client."""
 
-    def get_contacts(self) -> ContactsCollection:
+    def get_contacts(self) -> list[OtherUser]:
         pass
 
     def get_messages_history_by_user(self, user: IUser) -> list[IMessage]:
