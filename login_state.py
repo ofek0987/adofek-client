@@ -1,5 +1,5 @@
-from dataclasses import dataclass
 import tkinter
+
 from PIL import ImageTk, Image
 
 
