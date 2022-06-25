@@ -1,5 +1,5 @@
-from users.user import IUser
 from contacts_collection import ContactsCollection
+from users.user import IUser
 
 
 class ApplicationLogic:

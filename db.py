@@ -1,11 +1,12 @@
-from users.other_user import OtherUser
-from messages.message import IMessage
-from users.user import IUser
 from contacts_collection import ContactsCollection
+from messages.message import IMessage
+from users.other_user import OtherUser
+from users.user import IUser
 
 
 class DB:
     """Database management for client."""
+
     def get_contacts(self) -> ContactsCollection:
         pass
 
