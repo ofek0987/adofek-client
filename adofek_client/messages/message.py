@@ -1,8 +1,7 @@
 from abc import ABC
 from abc import abstractmethod
-
-from message_status import MessageStatus
-from users.user import IUser
+from adofek_client.users.user import IUser
+from adofek_client.message_status import MessageStatus
 
 
 class IMessage(ABC):
@@ -17,3 +16,6 @@ class IMessage(ABC):
     @abstractmethod
     def update_status(self, status: MessageStatus):
         pass
+
+    def __str__(self) -> str:
+        return f"sender : {self.sender} - receiver : {self.receiver}"

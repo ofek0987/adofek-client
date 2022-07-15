@@ -8,9 +8,9 @@ class LoginWindow:
     """Create and init sign in form."""
 
     def __init__(self, window: tkinter.Tk):
-        self.show_icon_panel = None
-        self.hide_icon_panel = None
-        self.hide_icon = None
+        self._show_icon_panel = None
+        self._hide_icon_panel = None
+        self._hide_icon = None
         self.forget_pass_btn = None
         self.login_button = None
         self.lgn_icon_panel = None
@@ -165,19 +165,19 @@ class LoginWindow:
         self.login_button.place(x=20, y=10)
 
     def create_password_show_or_hide_button(self):
-        self.hide_icon = Image.open('image projects\\images\\hide.png')
-        photo = ImageTk.PhotoImage(self.hide_icon)
-        self.hide_icon_panel = tkinter.Label(
+        self._hide_icon = Image.open('image projects\\images\\hide.png')
+        photo = ImageTk.PhotoImage(self._hide_icon)
+        self._hide_icon_panel = tkinter.Label(
             self.login_frame, image=photo, bg='blue',
         )
-        self.hide_icon_panel.image = photo
-        self.hide_icon_panel.place(x=910, y=350)
+        self._hide_icon_panel.image = photo
+        self._hide_icon_panel.place(x=910, y=350)
         self.show_icon = Image.open('image projects\\images\\show.png')
         photo = ImageTk.PhotoImage(self.show_icon)
-        self.show_icon_panel = tkinter.Label(
+        self._show_icon_panel = tkinter.Label(
             self.login_frame, image=photo, bg='blue',
         )
-        self.show_icon_panel.image = photo
+        self._show_icon_panel.image = photo
         # self.show_icon_panel.place(x=910, y=390)
 
     def create_forget_password_button(self):
