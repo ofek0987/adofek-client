@@ -17,5 +17,4 @@ class IMessage(ABC):
     def update_status(self, status: MessageStatus):
         pass
 
-    def __str__(self) -> str:
-        return f"sender : {self.sender} - receiver : {self.receiver}"
+
